@@ -1,40 +1,49 @@
-Instruction-tuned Stable Diffusion for Cartoonization
-Este projeto utiliza uma versão "instruction-tuned" do modelo Stable Diffusion v1.5, que foi ajustado a partir dos checkpoints do InstructPix2Pix. O objetivo é melhorar a capacidade do Stable Diffusion de seguir instruções específicas para operações de transformação de imagem.
+**Instruction-tuned Stable Diffusion for Cartoonization**
 
-Motivação do Pipeline
-A motivação por trás deste pipeline vem parcialmente do FLAN e do InstructPix2Pix. A ideia principal é criar um conjunto de dados com instruções (como descrito no blog) e, em seguida, realizar um treinamento no estilo do InstructPix2Pix. O objetivo final é aprimorar o modelo para que ele consiga seguir instruções específicas que envolvem operações de transformação de imagem.
+**Introdução**
+O Instruction-tuned Stable Diffusion for Cartoonization é um modelo de aprendizado de máquina avançado que utiliza uma versão "instruction-tuned" do Stable Diffusion v1.5. Este modelo foi ajustado a partir dos checkpoints do InstructPix2Pix para realizar a tarefa de cartoonização de imagens. A técnica de cartoonization transforma uma imagem real em uma versão estilizada de desenho animado, seguindo instruções específicas fornecidas pelo usuário.
+Este modelo tem um grande potencial em áreas como animações, jogos, design gráfico e, mais recentemente, em sistemas de arte gerada por IA, permitindo a criação de ilustrações únicas e criativas com base em imagens reais.
 
-Descrição do Pipeline
-O pipeline foi treinado com o conjunto de dados cartoonization, que pode ser encontrado neste repositório. O treinamento foi conduzido de maneira a refinar o modelo para realizar a tarefa de cartoonization, ou seja, transformar uma imagem normal em uma versão de desenho animado.
+**Motivação e Objetivo**
+A motivação por trás deste modelo é melhorar a capacidade do Stable Diffusion em seguir instruções específicas, aplicando transformações de imagem. O pipeline foi ajustado a partir do InstructPix2Pix, que é projetado para treinar modelos para editar imagens de acordo com instruções textuais, garantindo uma maior precisão e controle nas transformações realizadas.
+Principais Características
+•	Instruções Personalizadas: Permite a transformação de imagens com base em comandos textuais como "cartoonize" para criar versões de desenho animado.
+•	Alta Qualidade: Gera resultados com boa qualidade e detalhes, adaptando-se a diversas imagens de entrada.
+•	Eficiência: Com a utilização do modelo Stable Diffusion, o processo de geração de imagens é rápido e eficaz.
 
-Como Funciona
-Este modelo pode ser utilizado para a tarefa de cartoonização de imagens, onde você fornece uma imagem de entrada e uma instrução como entrada para o modelo. O modelo então gera uma versão "cartoonizada" dessa imagem com base na instrução fornecida.
+**Como Funciona**
+A ideia principal por trás deste modelo é treinar o Stable Diffusion a gerar imagens estilizadas a partir de instruções textuais específicas. O modelo é treinado com um conjunto de dados de cartoonização para garantir que ele produza transformações fiéis ao estilo desejado.
 
-Treinamento e Resultados
-O treinamento foi realizado no conjunto de dados instruction-tuning-sd/cartoonization. Para mais detalhes sobre o treinamento, consulte o repositório e os logs de treinamento aqui.
+**Processo de Treinamento**
+O treinamento foi realizado utilizando o conjunto de dados cartoonization, onde o modelo foi ajustado para aprender como transformar imagens reais em versões de desenho animado de maneira controlada e precisa.
 
-Exemplo de Resultado
-Veja abaixo alguns resultados obtidos com o pipeline:
+**Casos de Uso e Limitações**
+**Casos de Uso**
+•	Cartoonização de Imagens: A principal aplicação é transformar imagens reais em versões estilizadas, semelhantes a desenhos animados.
+•	Design e Animação: Pode ser utilizado por artistas e designers para criar imagens estilizadas de forma rápida e automática.
+Limitações
+•	Qualidade da Imagem de Entrada: O modelo pode não funcionar adequadamente se a imagem de entrada for de baixa qualidade.
+•	Complexidade das Imagens: Imagens com muitos detalhes ou características não convencionais podem não ser bem interpretadas pelo modelo.
+•	Uso Específico: O modelo foi treinado especificamente para a tarefa de cartoonização, e seu desempenho pode não ser ideal para outras transformações de imagem.
 
-Imagem Original: (imagem de exemplo)
-Imagem Cartoonizada: (imagem de exemplo)
-Casos de Uso Pretendidos e Limitações
-O pipeline pode ser usado para realizar cartoonization com uma imagem de entrada e uma instrução de entrada. No entanto, é importante observar as limitações do modelo:
+**Como Usar**
+**Pré-requisitos**
+•	Python 3.8 ou superior.
+•	PyTorch 1.8.1 ou superior.
+•	Biblioteca diffusers instalada.
 
-O modelo pode não funcionar bem em imagens com características altamente complexas ou não convencionais.
-O uso indevido, uso malicioso ou fora do escopo do modelo não é recomendado. Consulte o cartão do modelo para mais informações.
-Como Usar
-Para usar este modelo, basta seguir os passos abaixo:
+**Passos para Instalação e Execução**
+1.	Clonar o Repositório
 
-Instalação
-Instale as dependências necessárias:
+git clone https://github.com/seu-usuario/instruction-tuned-cartoonizer
+cd instruction-tuned-cartoonizer
 
-bash
-Copiar código
-pip install torch diffusers
-Código de Exemplo
-python
-Copiar código
+2.	Instalar as Dependências
+
+pip install -r requirements.txt
+
+3.	Executar o Modelo
+   
 import torch
 from diffusers import StableDiffusionInstructPix2PixPipeline
 from diffusers.utils import load_image
@@ -46,17 +55,25 @@ pipeline = StableDiffusionInstructPix2PixPipeline.from_pretrained(
 ).to("cuda")
 
 # Carregar a imagem de entrada
-image_path = "https://hf.co/datasets/diffusers/diffusers-images-docs/resolve/main/mountain.png"
+image_path = "caminho/para/imagem.jpg"
 image = load_image(image_path)
 
 # Aplicar a cartoonização
 image = pipeline("Cartoonize the following image", image=image).images[0]
 
 # Salvar a imagem gerada
-image.save("image.png")
-Este código irá carregar uma imagem de exemplo, aplicar a instrução de cartoonização e salvar a imagem gerada.
+image.save("imagem_cartoonizada.png")
 
-Referências
-FLAN: Wei et al., Finetuned Language Models are Zero-Shot Learners, ICLR, 2022. Link para o artigo
-InstructPix2Pix: Brooks et al., InstructPix2Pix: Learning to Follow Image Editing Instructions, CVPR, 2023.
-Instrução de treinamento para Stable Diffusion: Paul, Sayak, Instruction-tuning Stable Diffusion with InstructPix2Pix, Hugging Face Blog, 2023. Link para o blog
+
+Este código irá carregar uma imagem de entrada, aplicar a cartoonização e salvar a imagem resultante.
+
+**Problemas Comuns e Soluções**
+•	Erro de Memória: Se você estiver recebendo erros de memória, verifique se sua GPU possui memória suficiente para executar o modelo.
+•	Dependências Não Encontradas: Se alguma biblioteca não for encontrada, execute pip install -r requirements.txt para garantir que todas as dependências sejam instaladas corretamente.
+
+**Limitações e Uso Ético**
+•	Qualidade da Imagem: A qualidade do modelo depende fortemente da qualidade da imagem de entrada. Certifique-se de usar imagens claras e bem definidas para melhores resultados.
+•	Uso Indevido: O uso do modelo para gerar conteúdos prejudiciais ou não autorizados é estritamente proibido. Respeite as leis de direitos autorais e privacidade.
+
+**Licença**
+Este projeto é distribuído sob a licença Apache-2.0, permitindo o uso, modificação e distribuição do código dentro dos termos da licença.
