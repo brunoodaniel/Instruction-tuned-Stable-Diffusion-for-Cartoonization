@@ -35,11 +35,7 @@ O objetivo deste modelo é aprimorar a capacidade do **Stable Diffusion** de exe
 
 ---
 
-## **⚙️ Como Funciona**
-
-A técnica combina o modelo de difusão estável com um conjunto de dados de cartoonização. As instruções textuais orientam o modelo, que foi ajustado para aprender as transformações estilísticas desejadas.
-
-### **Pipeline Resumido**:
+## **⚙️ Pipeline**
 
 1- Entrada (Input):
 Uma imagem real é fornecida como entrada. Pode ser uma fotografia ou qualquer outra imagem que será transformada.
