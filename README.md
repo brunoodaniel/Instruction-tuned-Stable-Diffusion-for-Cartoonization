@@ -7,9 +7,14 @@
 
 ## **📜 Introdução**
 
-O *Instruction-tuned Stable Diffusion for Cartoonization* é um modelo avançado de aprendizado de máquina que combina o poder do **Stable Diffusion v1.5** com técnicas de ajuste baseadas no **InstructPix2Pix**, para transformar imagens reais em versões estilizadas como desenhos animados. 
+O Stable Diffusion for Cartoonization é uma inteligência artificial (IA) baseada em um modelo de aprendizado profundo. Especificamente, é uma extensão da arquitetura Stable Diffusion, que utiliza redes neurais de difusão para gerar ou transformar imagens com base em instruções textuais fornecidas pelo usuário.
 
-Com este modelo, artistas, designers e criadores podem gerar ilustrações únicas e criativas, abrindo novas possibilidades em animação, design gráfico e produção de conteúdo visual.
+## **O que é isso na prática?**
+- Modelo de IA para imagens: Ele transforma imagens reais em versões estilizadas, parecidas com desenhos animados (cartoonization).
+  
+- Baseado em Stable Diffusion: O Stable Diffusion é uma tecnologia de geração de imagens amplamente utilizada, treinada para criar imagens de alta qualidade a partir de descrições textuais ou aplicar transformações visuais em imagens existentes.
+  
+- Pipeline Ajustado: Esse modelo foi ajustado especificamente para a tarefa de cartoonização, o que significa que ele foi treinado com dados para interpretar e executar essas transformações de maneira eficiente.
 
 ---
 
