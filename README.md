@@ -129,7 +129,7 @@ Este código irá carregar uma imagem de entrada, aplicar a cartoonização e sa
 
 #### **5. Limitações e Uso Ético**
 
-- **Qualidade da Imagem**: A qualidade do modelo depende fortemente da qualidade da imagem de entrada, ou seja deve-se usar imagens claras e bem definidas para melhores resultados.
+- **Qualidade da Imagem**: A qualidade do modelo depende fortemente da qualidade da imagem de entrada, ou seja, deve-se usar imagens claras e bem definidas para melhores resultados.
 - **Uso Indevido**: O uso do modelo para gerar conteúdos prejudiciais ou não autorizados é estritamente proibido.
 
 #### **📚 Exemplo de Saída**
