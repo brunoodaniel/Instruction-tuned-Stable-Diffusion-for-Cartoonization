@@ -133,3 +133,6 @@ Este código irá carregar uma imagem de entrada, aplicar a cartoonização e sa
 #### **📚 Exemplo de Saída**
 
 Antes e depois da cartoonização:
+
+![image](https://github.com/user-attachments/assets/39ae54a8-9236-474b-82b2-7b43e9abe7d5)
+
