@@ -1,8 +1,5 @@
 # **Instruction-tuned Stable Diffusion for Cartoonization**
 
-![Imagem de destaque do projeto - exemplo de cartoonização]  
-*(Substitua aqui por uma imagem de exemplo antes e depois da cartoonização)*
-
 ---
 
 ## **📜 Introdução**
