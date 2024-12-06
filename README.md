@@ -41,12 +41,23 @@ A técnica combina o modelo de difusão estável com um conjunto de dados de car
 
 ### **Pipeline Resumido**:
 
-1. **Entrada**: Uma imagem e uma instrução textual, como *"Cartoonize this image."*  
-2. **Transformação**: O modelo processa a imagem real e aplica o estilo cartoon.  
-3. **Saída**: Uma imagem estilizada semelhante a um desenho animado.  
+1- Entrada (Input):
+Uma imagem real é fornecida como entrada. Pode ser uma fotografia ou qualquer outra imagem que será transformada.
 
-![image](https://github.com/user-attachments/assets/05462ef9-8311-4143-8bf1-e66ffe36afdb)
+2- Pré-processamento:
+A imagem é normalizada e redimensionada para se ajustar ao modelo, garantindo que os dados estejam em um formato compatível com a rede de difusão.
 
+3- Modelo Diffusion:
+
+- O modelo utiliza um processo inverso de difusão para gradualmente transformar a imagem de entrada em um estilo cartunesco.
+  
+- Isso é realizado removendo gradativamente o "ruído" e aplicando características estilizadas aprendidas durante o treinamento, que é ajustado para outputs de cartoon.
+  
+4- Ajuste Fino:
+O modelo foi previamente treinado com instruções específicas de estilo de cartoon, como cores vibrantes, bordas definidas e simplificação de texturas.
+
+5- Saída (Output):
+O resultado final é uma imagem estilizada, com características de cartoons, gerada de maneira eficiente pelo modelo.
 
 ---
 
