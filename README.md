@@ -48,8 +48,8 @@ A técnica combina o modelo de difusão estável com um conjunto de dados de car
 2. **Transformação**: O modelo processa a imagem real e aplica o estilo cartoon.  
 3. **Saída**: Uma imagem estilizada semelhante a um desenho animado.  
 
-![Fluxo do pipeline - entrada, transformação e saída]  
-*(Adicione uma imagem explicando o fluxo acima)*
+![image](https://github.com/user-attachments/assets/05462ef9-8311-4143-8bf1-e66ffe36afdb)
+
 
 ---
 
